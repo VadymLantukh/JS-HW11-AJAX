@@ -7,11 +7,13 @@ import fetchImages from './js/pixabay-api';
 import renderImages from './js/render-functions';
 
 const formEl = document.querySelector('.form');
+const listImagesEl = document.querySelector('.images-list');
 const loaderEl = document.querySelector('.loader');
 const inputEl = document.querySelector('.input');
 
 formEl.addEventListener('submit', event => {
   event.preventDefault();
+  listImagesEl.innerHTML = "";
   loaderEl.classList.add('loader-open');
 
   const valueUser = inputEl.value.trim();
