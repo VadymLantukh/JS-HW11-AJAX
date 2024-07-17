@@ -15,6 +15,7 @@ formEl.addEventListener('submit', event => {
   loaderEl.classList.add('loader-open');
 
   const valueUser = inputEl.value.trim();
+
   formEl.reset();
   if (!valueUser) {
     iziToast.error({
@@ -39,6 +40,7 @@ formEl.addEventListener('submit', event => {
       }
 
       renderImages(data.hits);
+
       new SimpleLightbox('.images-list a', {
         captionsData: 'alt',
         captionDelay: 250,
