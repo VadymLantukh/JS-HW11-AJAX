@@ -42,7 +42,6 @@ formEl.addEventListener('submit', event => {
       }
 
       renderImages(data.hits);
-
       new SimpleLightbox('.images-list a', {
         captionsData: 'alt',
         captionDelay: 250,
